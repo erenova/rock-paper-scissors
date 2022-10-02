@@ -16,26 +16,26 @@ let sci = 'scissors'
 
 
 if (player == computer) {
-    return `It's tie!`
+    return `Berabere!?!`
 
 } else if (player == ro && computer == pa)
 {  
-return `Paper beats rock! Computer Won!`
+return `Paper Beats Rock! Computer Won!`
 }
 else if (player == ro && computer == sci) {
-    return 'Rock beats scissors! Player won!'
+    return 'Rock Beats Scissors! Player Won!'
 }
 else if (player == pa && computer == ro) {
-    return 'Paper beats rock! Player won!'
+    return 'Paper Beats Rock! Player Won!'
 }
 else if (player == pa && computer == sci) {
-    return 'Scissors beats paper! Computer won!'
+    return 'Scissors Beats Paper! Computer Won!'
 }
 else if (player == sci && computer == ro){
-    return 'Rock beats Scissors! Computer won!'
+    return 'Rock Beats Scissors! Computer Won!'
 }
 else if (player == sci && computer == pa){
-    return `Scissors beats paper! Player won!`
+    return `Scissors Beats Paper! Player Won!`
 }
 
 }
@@ -44,39 +44,101 @@ else if (player == sci && computer == pa){
 
 
 function game() {
-let team1 = 0;
-let team2 = 0;
 
 
-for(let i = 0; i < 5; i++){
+
 let playerChoice = prompt(`Rock,Paper Scissors?`);
 let computerChoice = getComputerChoice()
 let gameResult = round(playerChoice, computerChoice)
-    switch (gameResult) {
-        case `Scissors beats paper! Player won!`:
-        case 'Paper beats rock! Player won!':
-        case 'Rock beats scissors! Player won!':
-            team1++
-            
-            break;
-        case 'Rock beats Scissors! Computer won!':
-        case 'Scissors beats paper! Computer won!':
-        case `Paper beats rock! Computer Won!`:
-            team2++
-            break;
-            default:
-                console.log('Round is tie')
-    }
-    console.log(`Player: ${team1} Computer: ${team2}`);
+   
+console.log(gameResult)
+}
 
-}
-if (team1 > team2){
-     console.log(`Player Won!`)
-} else if (team2 > team1)
-{ console.log(`Computer Won!`)}
-else {
-     console.log('Game is tie!')
-}
-}  
+  
 
 game()
+
+
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper')
+let scissors = document.querySelector('#scissors')
+
+function game() {
+
+
+}
+let res = document.getElementById('result')
+
+
+    let player1 = 0;
+    let computer1 = 0;
+    for (let index = 0; index < 1; index++) {
+        rock.addEventListener('click',function() {
+    
+            let playerChoice = 'rock';
+            let computerChoice = getComputerChoice();
+            let gameResult = round(playerChoice, computerChoice);
+            if (gameResult == 'Rock Beats Scissors! Player Won!') {
+                player1++
+            } else if (gameResult == `Paper Beats Rock! Computer Won!`){
+                computer1++
+            } else {}
+            res.textContent = `${gameResult} Player: ${player1} Computer: ${computer1}`;
+            if (player1 >= 3) {
+                res.textContent = `Player Score Is 3! Player Won!`
+            } else if ( computer1 >= 3){
+                res.textContent = `Computer Score Is 3! Computer Won!`
+            
+            }
+
+
+        })
+        
+        paper.addEventListener('click',function() {
+            
+            let playerChoice = 'paper';
+            let computerChoice = getComputerChoice()
+            let gameResult = round(playerChoice, computerChoice)
+            if (gameResult == 'Paper Beats Rock! Player Won!') {
+                player1++
+            } else if (gameResult == 'Scissors Beats Paper! Computer Won!') {
+                computer1++   
+            }
+            res.textContent = `${gameResult} Player: ${player1} Computer: ${computer1}`;
+            if (player1 >= 3) {
+                res.textContent = `Player Score Is 3! Player Won!`
+            } else if ( computer1 >= 3){
+                res.textContent = `Computer Score Is 3! Computer Won!`
+            
+            }
+        })
+        
+        scissors.addEventListener('click',function() {
+            
+            let playerChoice = 'scissors';
+            let computerChoice = getComputerChoice()
+            let gameResult = round(playerChoice, computerChoice)
+            if (gameResult == `Scissors Beats Paper! Player Won!`) {
+                player1++
+            } else if (gameResult == 'Rock Beats Scissors! Computer Won!') {
+                computer1++
+            }
+            res.textContent = `${gameResult} Player: ${player1} Computer: ${computer1}`;
+            if (player1 >= 3) {
+                res.textContent = `Player Score Is 3! Player Won!`
+            } else if ( computer1 >= 3){
+                res.textContent = `Computer Score Is 3! Computer Won!`
+            
+            }
+        })
+        
+    }
+
+
+
+
+
+
+
+
+res.setAttribute('style','font-size:25px;font-weight:bold')

@@ -1,0 +1,16 @@
+html {
+    background-color: antiquewhite;
+}
+
+.game {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+#result {
+    display: flex;
+    margin-top: 250px;
+    align-items: center;
+    justify-content: center;
+}
