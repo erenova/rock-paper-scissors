@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'neon_led_lightregular';
+    src: url('assets/neonledlight-webfont.woff2') format('woff2'),
+         url('assets/neonledlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.main {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.winner {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  font-family: monospace;
+  }
+
+.rounds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+}
+
+
+.buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+}
+
+.stage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #f0f0f0;
+    background-color: #000;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+  }
+  
+  .stage::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50% 50% 0 0;
+  }
+  
+  .stage::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 0 0 50% 50%;
+    z-index: 1;
+}
+
+  .score {
+    margin-top: 45px;
+    font-family: 'neon_led_lightregular';
+    color: red;
+    font-size: 10rem;
+  }
+
+
+  .score-text {
+    font-family: 'neon_led_lightregular';
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 2;
+    
+  }
+
+  .name {
+    z-index: 2;
+    height: 100%;
+}
+
+img {
+    width: 25vw;
+    height: 10vh;
+}
