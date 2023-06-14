@@ -69,10 +69,6 @@ body {
   flex-wrap: wrap;
 }
 
-.move-buttons {
-  /* opacity: 0.5; */
-}
-
 .move-img {
   width: 200px;
   height: 200px;
@@ -148,6 +144,12 @@ button:active {
 }
 
 .computer-animation {
+  opacity: 0;
+  transform: rotateY(-180deg) rotate(90deg);
+}
+
+.revert {
+  transition: 300ms ease;
   opacity: 0;
   transform: rotateY(-180deg) rotate(90deg);
 }
