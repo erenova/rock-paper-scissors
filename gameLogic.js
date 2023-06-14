@@ -194,7 +194,14 @@ const moveList = [
 moveList.forEach((e) => {
   if (e.moveName == "reset") {
     e.moveDOM.addEventListener("click", () => {
-      clearAnimation();
+      animationObject.playerAnimation.classList.remove("player-animating");
+      animationObject.computerAnimation.classList.remove("computer-animating");
+      animationObject.computerAnimation.classList.add("revert");
+      animationObject.playerAnimation.classList.add("revert");
+      setTimeout(() => {
+        animationObject.computerAnimation.classList.remove("revert");
+        animationObject.playerAnimation.classList.remove("revert");
+      }, 300);
       settings.round = 0;
       styling.playerBorder.classList.remove("winner-glow");
       styling.computerBorder.classList.remove("winner-glow");
