@@ -8,15 +8,6 @@ Welcome to the Rock-Paper-Scissors game! This project implements a web-based ver
 
 Check out the live demo of the game **[here](https://erenova.github.io/rock-paper-scissors/)**.
 
-## **Table of Contents**
-
-- **[Game Features](https://chat.openai.com/?model=text-davinci-002-render-sha#game-features)**
-- **[Technologies Used](https://chat.openai.com/?model=text-davinci-002-render-sha#technologies-used)**
-- **[Installation](https://chat.openai.com/?model=text-davinci-002-render-sha#installation)**
-- **[Usage](https://chat.openai.com/?model=text-davinci-002-render-sha#usage)**
-- **[Contributing](https://chat.openai.com/?model=text-davinci-002-render-sha#contributing)**
-- **[License](https://chat.openai.com/?model=text-davinci-002-render-sha#license)**
-
 ## **Game Features**
 
 - Play against the computer in a game of Rock-Paper-Scissors.
