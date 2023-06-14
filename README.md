@@ -1,6 +1,6 @@
 # rock-paper-scissors
 
-!https://oyununfotografi.com/
+
 
 Welcome to the Rock-Paper-Scissors game! This project implements a web-based version of the classic game using HTML, CSS, and JavaScript. The game features a user interface (UI) with additional animations and effects such as transitions, keyframes and more.
 
