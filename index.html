@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
+
+<head>
     <script src="gameLogic.js" defer></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
 
-  <body>
-    <div class="main">
-      <div class="rounds">
-        <div class="stage">
-          <div class="player-score score"></div>
-          <div class="score-text"><div class="name">Player</div></div>
+<body>
+
+    <div class="scoreboard-panel">
+        <div class="scoreboard-game">
+            <div class="scoreboard-player board">
+                <div class="scoreboard-player-score score">0</div>
+                <div class="scoreboard-player-title title">Player</div>
+            </div>
+            <div class="scoreboard-result">Player Won the round</div>
+            <div class="scoreboard-computer board">
+                <div class="scoreboard-computer-score score">0</div>
+                <div class="scoreboard-computer-title title">Computer</div>
+            </div>
         </div>
-        <div class="stage">
-          <div class="computer-score score"></div>
-          <div class="score-text"><div class="name">Computer</div></div>
-        </div>
-      </div>
-      <div class="winner"></div>
+
+
+
     </div>
 
-    <div class="buttons">
-      <button class="button" data-move="rock">
-        <img src="assets/rock.svg" alt="rock" data-move="rock" />
-        rock
-      </button>
-      <button class="button" data-move="paper">
-        <img src="assets/paper.svg" alt="paper" data-move="paper" />
-        paper
-      </button>
-      <button class="button" data-move="scissors">
-        <img src="assets/scissors.svg" alt="scissors" data-move="scissors" />
-        scissors
-      </button>
+
+    <div class="interactions">
+        <button class="action-game action-rock"><img src="assets/rock.svg" alt="" srcset=""></button>
+        <button class="action-game action-paper"><img src="assets/paper.svg" alt="" srcset=""></button>
+        <button class="action-game action-scissors"><img src="assets/scissors.svg" alt="" srcset=""></button>
     </div>
-  </body>
+
+
+    <div class="modal-dark deactive">
+        <div class="move-modal deactive"></div>
+    </div>
+
+
+    <div class="footer"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let title = ` ${document.title}`,
+            index = 0;
+        (function slideTitle() {
+            index = (index + 1) % (title.length + 1);
+            var animatedTitle = title.substring(index) + title.substring(0, index);
+            document.title = animatedTitle;
+            setTimeout(slideTitle, 600);
+        })();
+
+    </script>
+</body>
+
 </html>
