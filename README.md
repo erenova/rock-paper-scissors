@@ -1,8 +1,6 @@
 # rock-paper-scissors
 Welcome to the Rock-Paper-Scissors game! This project implements a web-based version of the classic game using HTML, CSS, and JavaScript. The game features a user interface (UI) with additional animations and effects such as transitions, keyframes and more.
 
-![aaa](https://github.com/erenova/rock-paper-scissors/assets/95050098/2d31f806-010b-4c1b-ae55-5b0d3b158b18)
-
 ## **Demo**
 
 Check out the live demo of the game **[here](https://erenova.github.io/rock-paper-scissors/)**.
@@ -12,6 +10,8 @@ Check out the live demo of the game **[here](https://erenova.github.io/rock-pape
 - Play against the computer in a game of Rock-Paper-Scissors.
 - Enjoy an interactive and visually appealing user interface.
 - Experience smooth transitions and animations.
+
+![aaa](https://github.com/erenova/rock-paper-scissors/assets/95050098/2d31f806-010b-4c1b-ae55-5b0d3b158b18)
 
 ## **Technologies Used**
 
